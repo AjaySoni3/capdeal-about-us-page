@@ -1,0 +1,16 @@
+.composition {
+  &__img--1 {
+    height: 25rem;
+    width: 70%;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  &__img--2 {
+    padding-left: 4rem;
+    height: 25rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}

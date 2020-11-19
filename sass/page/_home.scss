@@ -1,0 +1,133 @@
+.section__started {
+  // background-color: $color-grey-light-1;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-darker
+  );
+  padding: 10rem 0 25rem 0;
+  transform: skewY(-5deg);
+  & > * {
+    transform: skewY(5deg);
+  }
+  margin-top: -7rem;
+}
+
+.section__leader {
+  padding: 10rem 0 30rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-dark,
+    $color-primary-darker
+  );
+  background-size: cover;
+
+  transform: skewY(-4deg);
+  // clip-path: polygon(0 12%, 100% 1%, 100% 99%, 0 95%, 0% 12%);
+  margin-top: -12rem;
+  position: relative;
+
+  & > * {
+    transform: skewY(4deg);
+  }
+  &--line {
+    animation: moveLine 1s linear infinite;
+    transition: all ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--1 {
+      content: "";
+      height: 0.4rem;
+      width: 40rem;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-light,
+        $color-secondary-dark
+      );
+    }
+  }
+}
+
+.section__team {
+  padding: 5rem 0 30rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-dark,
+    $color-primary-darker
+  );
+  background-size: cover;
+  transform: skewY(4deg);
+  & > * {
+    transform: skewY(-4deg);
+  }
+  margin-top: -15rem;
+  margin-bottom: -30rem;
+}
+
+.section__footer {
+  margin-top: -50rem;
+  &-wave {
+    content: "";
+    height: 60rem;
+    width: 100%;
+    background-image: linear-gradient(
+      to right,
+      $color-secondary-light,
+      $color-secondary-dark
+    );
+    animation: waveAnimate 4s ease-in infinite;
+    position: relative;
+  }
+
+  &-social-link {
+    position: absolute;
+    top: 73%;
+    left: 75%;
+    text-align: center;
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & li {
+      list-style: none;
+    }
+  }
+  &-img {
+    height: 3rem;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  &-line {
+    content: "";
+    height: 0.2rem;
+    width: 114rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-dark,
+      $color-primary-darker
+    );
+
+    position: absolute;
+    top: 95%;
+    border: none;
+  }
+
+  &-par {
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.footer_logo {
+  position: absolute;
+  top: 70%;
+}

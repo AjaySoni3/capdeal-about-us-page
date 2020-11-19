@@ -1,0 +1,73 @@
+.card {
+  //functionally
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 35rem;
+
+  &__side {
+    height: 35rem;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+    &--back {
+      transform: rotateX(-180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateX(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateX(0);
+  }
+
+  //front side
+  &-info {
+    margin-top: 4rem;
+    display: block;
+    color: $color-white;
+    text-align: center;
+  }
+  &__img--1 {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--post {
+    color: $color-grey-dark;
+  }
+
+  //back side
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: $color-white;
+    overflow: hidden;
+    background-size: cover;
+  }
+}
