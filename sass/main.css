@@ -450,6 +450,74 @@ body {
   text-align: center;
 }
 
+.card__1 {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 35rem;
+}
+
+.card__1--shape {
+  height: 35rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.card__1-info {
+  margin-top: 4rem;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.card__1--img {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  background-size: cover;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card__1:hover .card__1--img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: blur(3px) brightness(70%);
+          filter: blur(3px) brightness(70%);
+}
+
+.card__1--detail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 30%);
+          transform: translate(-50%, 30%);
+  text-align: center;
+  width: 80%;
+  opacity: 0;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card__1:hover .card__1--detail {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .card {
   -webkit-perspective: 150rem;
           perspective: 150rem;

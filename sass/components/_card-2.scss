@@ -1,0 +1,57 @@
+.card__1 {
+  //functionally
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 35rem;
+
+  &--shape {
+    height: 35rem;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  }
+
+  //front side
+  &-info {
+    margin-top: 4rem;
+    display: block;
+    color: $color-white;
+    text-align: center;
+  }
+  &--img {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.4);
+    background-size: cover;
+    transition: all 0.5s;
+  }
+
+  &:hover &--img {
+    transform: scale(1);
+    filter: blur(3px) brightness(70%);
+  }
+
+  &--detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    text-align: center;
+    width: 80%;
+    opacity: 0;
+    color: $color-white;
+    transition: all 0.5s;
+  }
+
+  &:hover &--detail {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
